@@ -108,5 +108,5 @@ export const tweetsGetterService = async (
     log.succeed("task finished");
   }
 
-  return tweets;
+  return tweets.sort((a, b) => (a.id ?? "0").localeCompare(b.id ?? "1"));
 };
